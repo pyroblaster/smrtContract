@@ -14,6 +14,5 @@ fun main(args: Array<String>) {
     if(zeroHero.Status!=true && zeroHero.Pulse>0){
             println(zeroHero.EthAddress) //transfer funds (not done)
     }
-//also possible to print i *init*; added
     //how to verify death
 }
