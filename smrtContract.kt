@@ -73,7 +73,7 @@ fun main(args: Array<String>) {
             println(zeroHero.GetEthAddress()) //transfer funds (not done)
     }
 //also possible to print i *init*; added
-    //how to declare someone dead=?
+    //how to verify death
 
 
 
