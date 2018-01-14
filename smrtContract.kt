@@ -2,7 +2,8 @@
  * Created by Reptilko on 1/14/2018.
  */
 
-class Person(Name: String, Surname: String, DayBirth: Int, MonthBirth: Int, YearBirth: Int, ID: Int, Nationality: String, Status:Boolean, EthAddress:String){
+class Person(Name: String, Surname: String, DayBirth: Int, MonthBirth: Int, YearBirth: Int, ID: Int, Nationality: String, Status:Boolean, EthAddress:String,
+             Pulse:Int){
     var Name:String?=null
     var Surname:String?=null
     var DayBirth:Int?=null
@@ -12,6 +13,7 @@ class Person(Name: String, Surname: String, DayBirth: Int, MonthBirth: Int, Year
     var Nationality:String?=null
     var Status:Boolean?=null
     var EthAddress:String?=null
+    var Pulse:Int?=null
     init{
 /*
         println("Name: $Name")
@@ -31,6 +33,7 @@ class Person(Name: String, Surname: String, DayBirth: Int, MonthBirth: Int, Year
         this.Nationality=Nationality
         this.Status=Status
         this.EthAddress=EthAddress
+        this.Pulse=Pulse
     }
 
     fun GetName():String{
@@ -60,16 +63,20 @@ class Person(Name: String, Surname: String, DayBirth: Int, MonthBirth: Int, Year
     fun GetEthAddress():String{
         return this.EthAddress!!
     }
+    fun GetPulse():Int{
+        return this.Pulse!!
+    }
 }
 
 //balance transfer function
 
 fun main(args: Array<String>) {
-    var zeroHero = Person("Zero", "Hero", 29, 8, 1937, 1010101010, "NoCoiner", true, "0x774802cC0b0eeEB0cE4DEf9638AB04C35AAB7F24")
+    var zeroHero = Person("Zero", "Hero", 29, 8, 1937, 1010101010, "NoCoiner", true,
+            "0x774802cC0b0eeEB0cE4DEf9638AB04C35AAB7F24", 80)
     print(zeroHero.GetName() + zeroHero.GetSurname() + zeroHero.GetDayBirt() + zeroHero.GetMonthBirth() +
             zeroHero.GetYearBirth() + zeroHero.GetYearBirth() + zeroHero.GetID()+ zeroHero.GetNationality() +
-                zeroHero.GetStatus() + zeroHero.GetEthAddress())
-    if(zeroHero.GetStatus()!=true){
+                zeroHero.GetStatus() + zeroHero.GetEthAddress() + zeroHero.GetPulse())
+    if(zeroHero.GetStatus()!=true && zeroHero.GetPulse()>0){
             println(zeroHero.GetEthAddress()) //transfer funds (not done)
     }
 //also possible to print i *init*; added
